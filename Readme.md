@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Egor Arkharov](https://up.htmlacademy.ru/htmlcss/27/user/976243).
-* Наставник: `Неизвестно`.
+* Наставник: [Anna Linkova](https://up.htmlacademy.ru/htmlcss/27/user/1015999).
 
 ---
 
