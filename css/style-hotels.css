@@ -1,0 +1,226 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 1200px;
+	color: #000000;
+	background-color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	font-family: PTsans, Helvetica, sans-serif;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: #202020;
+}
+
+ul {
+	margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2 {
+	position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+header {
+	height: 56px;
+	width: 1055px;
+	margin: 0 72px;
+	position: relative;
+	z-index: 200;
+} 
+
+.header-logo {
+	position: absolute;
+	left: 458.5px;
+}
+
+.main-nav {
+	margin: 0;
+	padding: 15px 0;
+	text-align: justify;
+}
+
+.main-nav li {
+	margin: 0;
+	padding: 0;
+	width: 127px;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.main-nav .heading-info,
+.main-nav .heading-photo{
+	text-align: left;
+}
+
+.main-nav .heading-map,
+.main-nav .heading-hotels{
+	text-align: right;
+}
+
+.main-nav .heading-photo {
+	margin-left: 112px;
+}
+
+.main-nav .heading-map {
+	margin-left: 321px;
+}
+
+.main-nav .heading-hotels {
+	float: right;
+}
+
+.main-nav a:hover {
+	color: #91bcd8;
+}
+
+.main-nav a:focus {
+	color: #c9c9c9;
+}
+
+.main-nav a:active{
+	color: #aca099;
+}
+
+.visibility-hidden {
+	height: 303px;
+	visibility: hidden;
+}
+
+li {
+	display: block;
+	width: inherit;
+	height: 151px;
+	border-top: 1px solid #e5e5e5;
+	padding: 0 72px;
+}
+
+li:last-child {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-description {
+	float: left;
+	width: 422px;
+	box-sizing: border-box;
+}
+
+.hotel-rating {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+	margin: 0;
+	height: 120px;
+	background-color: #f9fbf6;
+	opacity: 0.9;
+}
+
+.footer-container {
+	padding-top: 36px;
+	width: 966px;
+	height: inherit;
+	margin: 0 auto;
+}
+
+.hashtag {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	float: left;
+	vertical-align: middle;
+	margin-top: 11px;
+}
+
+.footer-social {
+	margin-left: 255px;
+	float: left;
+}
+
+.footer-social li {
+	display: inline-block;
+}
+
+.social-btn {
+	display: inline-block;
+	width: 46px;
+	height: 48px;
+	background-color: #81b3d2;
+	vertical-align: middle;
+	background-image: url("../img/sprite.png");
+	font-size: 0;
+}
+
+.social-btn-tw {
+  background-position: -235px -15px;
+}
+
+.social-btn-fb {
+  background-position: -290px -17px;
+}
+
+.social-btn-yt {
+  background-position: -352px -15px;
+}
+
+.footer-copyright {
+	padding-top: 2px;
+	width: 211px;
+	height: 41px;
+	float: right;
+}
+
+.footer-copyright .copyright {
+	margin: 0;
+	padding: 0;
+	padding-top: 7.5px;
+	float: left;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.footer-copyright a {
+	float: right;
+}
