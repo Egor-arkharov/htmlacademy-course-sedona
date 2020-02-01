@@ -27,13 +27,15 @@ ul {
   list-style: none;
 }
 
-h1,
-h2 {
-	position: absolute;
-  clip: rect(0 0 0 0);
+.visually-hidden {
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 header {
@@ -102,14 +104,11 @@ header {
 .main-logo {
 	width: 1200px;
 	height: 717px;
-	background-image: url("../img/Group\ 1.png"), url("../img/Sedona_mountain.jpg");
-	background-position: 50% 76px, center;
-	background-repeat: no-repeat;
-	border-image-source: url("../img/mask.png");
-	background-clip: padding-box;
-  background-origin: content-box;
 	position: relative;
 	z-index: 100;
+	background-image: url("../img/mask.png"), url("../img/slogan.png"), url("../img/Sedona_mountain.jpg");
+	background-position: 50% 451px, 50% 76px, center;
+	background-repeat: no-repeat;
 }
 
 .main-info {
@@ -322,11 +321,6 @@ header {
 	height: 473px;
 	position: relative;
 }
-
-/*.map {
-	height: 593px;
-	background-image: url("../img/map.png");
-}*/
 
 /*-----------------ФОРМА START-----------------*/
 form {

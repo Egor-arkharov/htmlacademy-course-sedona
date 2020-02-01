@@ -30,10 +30,13 @@ ul {
 h1,
 h2 {
 	position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
-  margin: -1px;
+	margin: -1px;
+	border: none;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 header {
@@ -99,7 +102,7 @@ header {
 	color: #aca099;
 }
 
-.visibility-hidden {
+.visually-hidden {
 	height: 303px;
 	visibility: hidden;
 }
