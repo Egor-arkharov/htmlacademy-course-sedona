@@ -34,7 +34,7 @@
         <h2 class="visually-hidden">Причина поехать в Седону №1</h2>
         <div class="reason__container">
           <div class="reason__content">
-            <h3>Настоящий городок</h3>
+            <h3>Настоящий<br>  городок</h3>
             <p>- №1 -</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
           </div>
@@ -47,15 +47,15 @@
       <section class="features features-1">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <ul class="features__list">
-          <li class="feature__item feature__house">
+          <li class="feature__item house">
             <h3>Жильё</h3>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </li>
-          <li class="feature__item feature__food">
+          <li class="feature__item food">
             <h3>Еда</h3>
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="feature__item feature__souvenir">
+          <li class="feature__item souvenir">
             <h3>Сувениры</h3>
             <p>Не только китайского, но и местного производства!</p>
           </li>
@@ -115,33 +115,25 @@
             <div class="find-hotel__item">
               <label for="check-in">Дата заезда:</label>
               <input type="date" name="date" id="check-in" value="2017-04-26">
+              <svg class="form-calendar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="22"><image width="21" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAABtUlEQVQ4jbWUzSuEURTGfzSSfIyUlQ02YydlqbCRJVlYkJXNLBQlsiIbhcJfIF+LKUUpKRuyVSNEU/JRppSUImRDV8/UcefVO4VTp3vP8z73ec+959ybl0gk8KwPmABqDVwDpIAYcGXwS3GXrUS+rwhUyK1FgQKNYdwv0TjwBHzI57T4w3hS/KSHR8XPxE4nHgFmgF1gXwubgXZgzPy8ChgGZoG0waeAHW/tjBMtBpaATUNuBeZNXC/RNeDI4OMSzHCvgY5I1onCBvDgYefAIHDm4QPAgS8QJHoDrHjYO7CQxYTVLOSH6v/agkR7dG7OG4UlFG8rbjScnly2X6nCOCvRGBNWbvB6ww8V3VIVnZ1qHFJPvhi8U/OTXEQLTUaZ76XCIgYvN/xQ0TbdEtSvd8Cktus6Yx2oAxbNLr61WpDorbkhjxoPNb8z+L7hh2a6LrfW78Wu6i1ZK2VBLRVXJs6bhB0oPlbcZDjxXDItNE+cLZTDygweNfxQUfdo7Gl+obEbKNJ1RWfcoHnaFwgSvZdbS3nxs/dafbN/ufsu01egF6j+Az1XwFcnOgpMA11/IPoGjHwCU0xk0k1n0VIAAAAASUVORK5CYII="/></svg>
             </div>
             <div class="find-hotel__item">
               <label for="check-out">Дата выезда:</label>
               <input type="date" name="date" id="check-out" value="2017-07-04">
+              <svg class="form-calendar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="22"><image width="21" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAABtUlEQVQ4jbWUzSuEURTGfzSSfIyUlQ02YydlqbCRJVlYkJXNLBQlsiIbhcJfIF+LKUUpKRuyVSNEU/JRppSUImRDV8/UcefVO4VTp3vP8z73ec+959ybl0gk8KwPmABqDVwDpIAYcGXwS3GXrUS+rwhUyK1FgQKNYdwv0TjwBHzI57T4w3hS/KSHR8XPxE4nHgFmgF1gXwubgXZgzPy8ChgGZoG0waeAHW/tjBMtBpaATUNuBeZNXC/RNeDI4OMSzHCvgY5I1onCBvDgYefAIHDm4QPAgS8QJHoDrHjYO7CQxYTVLOSH6v/agkR7dG7OG4UlFG8rbjScnly2X6nCOCvRGBNWbvB6ww8V3VIVnZ1qHFJPvhi8U/OTXEQLTUaZ76XCIgYvN/xQ0TbdEtSvd8Cktus6Yx2oAxbNLr61WpDorbkhjxoPNb8z+L7hh2a6LrfW78Wu6i1ZK2VBLRVXJs6bhB0oPlbcZDjxXDItNE+cLZTDygweNfxQUfdo7Gl+obEbKNJ1RWfcoHnaFwgSvZdbS3nxs/dafbN/ufsu01egF6j+Az1XwFcnOgpMA11/IPoGjHwCU0xk0k1n0VIAAAAASUVORK5CYII="/></svg>
             </div>
             <div class="find-hotel__numbers">
               <div class="find-hotel__item-half">
                 <label for="adults">Взрослые:</label>
-                <button type="button">
-                  <div class="minus"></div>
-                </button>
+                <button class="minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
                 <input type="number" min="1" step="1" id="adults" value="2">
-                <button type="button">
-                  <div class="plus-horizontal"></div>
-                  <div class="plus-vertical"></div>
-                </button>
+                <button class="plus" type="button" onclick="this.previousElementSibling.stepUp()"></button>
               </div>
               <div class="find-hotel__item-half">
                 <label for="children">Дети:</label>
-                <button type="button">
-                  <div class="minus"></div>
-                </button>
+                <button class="minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
                 <input type="number" min="0" step="1" id="children" value="0">
-                <button type="button">
-                  <div class="plus-horizontal"></div>
-                  <div class="plus-vertical"></div>
-                </button>
+                <button class="plus" type="button" onclick="this.previousElementSibling.stepUp()"></button>
               </div>
            </div>
            <button class="find-hotel-btn" type="submit">Найти</button>

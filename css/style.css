@@ -21,8 +21,8 @@ body {
 	background-color: rgb(255, 255, 255);
 
 	box-shadow:
-		-40px 0 0 #f2f2f2,
-		 40px 0 0 #f2f2f2;
+		-150vh 0 0 #f2f2f2,
+		 150vh 0 0 #f2f2f2;
 }
 
 
@@ -134,19 +134,21 @@ header img {
 
 	background-image: url("../img/mask.png"), url("../img/slogan.png"), url("../img/Sedona_mountain.jpg");
 	background-position: 50% 452px, 50% 76px, center;
-	background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: contain, auto, cover;
 }
 
 .slogan-content {
-	position: absolute;
-	bottom: 0;
-  left: calc(50% - (1200px / 2));
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: calc(50% - (100% / 2));
 
-  height: 216px;
-	width: inherit;
-	padding: 61px 300px 56px;
+  min-height: 216px;
+  padding: 61px 300px 56px;
 
-	background-color: white;
+  background-color: white;
 }
 
 .slogan-content strong {
@@ -178,7 +180,7 @@ header img {
 .reason__container {
   display: flex;
   justify-content: space-between;
-  height: 256px;
+  /* height: 256px; */
 }
 
 .reason__content {
@@ -186,7 +188,7 @@ header img {
   flex-direction: column;
   justify-content: space-between;
 
-  width: 400px;
+  width: calc(100% - 800px);
   padding: 46px 60px 64px;
 }
 
@@ -199,10 +201,6 @@ header img {
 	font-weight: bold;
 }
 
-.reason-1 h3 {
-  word-spacing: 70px;
-}
-
 .reason__content p  {
   margin: 0;
   padding: 0;
@@ -210,6 +208,10 @@ header img {
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
+}
+
+.reason__img {
+  height: 256px;
 }
 
 .reason__img img {
@@ -268,7 +270,7 @@ header img {
   content: "";
 
   position: absolute;
-  bottom: calc(32px + 80px);
+  top: -100px;
 	left: calc(50% - (75px / 2));
 
   width: 75px;
@@ -279,20 +281,17 @@ header img {
 	background-repeat: no-repeat;
 }
 
-.feature__house::before {
+.features__list .house::before {
 	background-image: url(../img/icon-1.svg);
-
 }
 
-.feature__food::before {
+.features__list .food::before {
 	background-image: url(../img/icon-2.svg);
-
 }
 
-.feature__souvenir::before {
+.features__list .souvenir::before {
 	background-image: url(../img/icon-3.svg);
 }
-
 
 .features-2 h3 {
   word-spacing: 250px;
@@ -339,6 +338,11 @@ header img {
 
 	width: auto;
 	height: 473px;
+}
+.map-container img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
 }
 
 /*-----------------ФОРМА START-----------------*/
@@ -392,6 +396,8 @@ header img {
   justify-content: space-between;
   align-items: center;
 
+  position: relative;
+
   width: 100%;
   height: 38px;
   margin-bottom: 30px;
@@ -412,14 +418,27 @@ header img {
 	background-color: #f2f2f2;
 }
 
+.form-open input::-webkit-inner-spin-button {
+  display: none;
+}
+
 .form-open input[type="date"] {
   width: 346px;
   height: inherit;
   padding-left: 12px;
+  padding-right: 40px;
 
-  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
 
-  background: url("../img/calendar.svg") no-repeat 97% 50%;
+.form-calendar {
+  position: absolute;
+  right: 3%;
+  top: calc(50% - (22px / 2));
+}
+
+.form-calendar:hover path{
+  fill: black;
 }
 
 .find-hotel__numbers {
@@ -452,6 +471,8 @@ header img {
 }
 
 .find-hotel__item-half button {
+  position: relative;
+
   width: 38px;
   height: inherit;
   padding: 17px 13px;
@@ -461,22 +482,42 @@ header img {
   outline: none;
 }
 
-.minus,
-.plus-horizontal,
-.plus-vertical {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.minus::before,
+.plus::before {
+  content: "";
+
+  position: absolute;
+  left: calc(50% - (12px / 2));
+  top: calc(50% - (3px / 2));
+
+  width: 12px;
+  height: 3px;
+
   background-color: #a9a9a9;
 }
 
-.plus-vertical {
-  position: relative;
-  left: 0;
-  bottom: 4px;
-  transform: rotate(90deg);
+.plus::after {
+  content: "";
+
+  position: absolute;
+  left: calc(50% - (3px / 2));
+  top: calc(50% - (12px / 2));
+
+  width: 3px;
+  height: 12px;
+
+  background-color: #a9a9a9;
 }
+
+/* .minus:hover .minus::before{
+  background-color: #000000;
+}
+
+.minus::before:active,
+.plus::before:active,
+.plus::after:active{
+  background-color: #81b3d2;
+} */
 
 .find-hotel-btn {
 	width: 100%;
@@ -505,11 +546,11 @@ header img {
   background-color: #ffffff;
 }
 
-.form-open button:hover {
+.find-hotel-btn:hover {
   background-color: #669ec0;
 }
 
-.form-open button:focus {
+.find-hotel-btn:focus {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
@@ -616,7 +657,7 @@ footer {
 
 /*-----------------form-hotel START-----------------*/
 .form-hotel {
-  height: 217px;
+  /* height: 217px; */
   padding: 31px 72px;
 
   text-align: start;
@@ -699,6 +740,10 @@ legend {
 
 .check__input:checked + .check__box {
   background-image: url(../img/checkbox-on.svg);
+}
+
+.check__input:disabled + .check__box {
+  background: #6a6a6a url(../img/checkbox-off.svg);
 }
 
 /*--------------- form-hotel-right Start-------------- */
@@ -811,6 +856,10 @@ legend {
 
 .range-toggle-max {
   left: 80%;
+}
+
+.filter-range input::-webkit-inner-spin-button {
+  display: none;
 }
 
 .btn-transparent {
