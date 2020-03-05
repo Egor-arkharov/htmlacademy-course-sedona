@@ -26,12 +26,6 @@ a {
 	color: #202020;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-  list-style: none;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -72,6 +66,9 @@ header {
 
   height: 56px;
   margin: 0 auto;
+
+	padding: 0;
+  list-style: none;
 }
 
 .main-nav li {
@@ -135,6 +132,7 @@ header img {
 
 	height: 724px;
 
+  background-color: lightblue;
 	background-image: url("../img/slogan.png"), url("../img/Sedona_mountain.jpg");
 	background-position: 50% 76px, center;
   background-repeat: no-repeat;
@@ -159,14 +157,13 @@ header img {
 .slogan-content::before {
   content: "";
   position: absolute;
-  top: -57px;
+  top: -56px;
   left: 0;
 
   width: 100%;
   height: 59px;
 
   background-image: url("../img/mask.png");
-  background-position: center;
 }
 
 .slogan-content strong {
@@ -211,11 +208,11 @@ header img {
   justify-content: space-between;
 
   flex-basis: 400px;
-  padding: 50px 60px 65px;
+  padding: 50px 60px 60px;
 }
 
 .reason-2 .reason__content {
-  padding: 48px 49px 60px;
+  padding: 43px 49px 63px;
 }
 
 .reason__content h3 {
@@ -260,7 +257,7 @@ header img {
 }
 
 .features-2 {
-  padding: 48px 0 65px;
+  padding: 45px 0 65px;
 	background-color: #eeeeee;
 }
 
@@ -269,6 +266,8 @@ header img {
   justify-content: space-between;
 
   margin: 0 auto;
+	padding: 0;
+  list-style: none;
 }
 
 .feature__item {
@@ -343,7 +342,7 @@ header img {
 .call {
 	position: relative;
 
-	padding: 48px 0 135px;
+	padding: 43px 0 133px;
 }
 
 .call-container {
@@ -372,7 +371,9 @@ header img {
   position: relative;
 
   margin: 0 auto;
-	height: 473px;
+  height: 473px;
+
+  background: green url("../img/map.png") no-repeat;
 }
 
 /*-----------------ФОРМА START-----------------*/
@@ -384,12 +385,11 @@ header img {
   width: 568px;
 
 	text-align: justify;
-  background-color: #ffffff;
 }
 
 .search {
   width: inherit;
-	height: 85px;
+	min-height: 86px;
   margin: 0;
   padding: 0;
 
@@ -417,7 +417,9 @@ header img {
 .find-hotel__form {
   padding: 55px;
   display: none;
-  animation: bounce 0.6s;
+  animation: bounce 0.9s;
+
+  background-color: #ffffff;
 }
 
 
@@ -425,7 +427,6 @@ header img {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-
 }
 
 .find-hotel__item {
@@ -459,24 +460,30 @@ header img {
   display: none;
 }
 
-.find-hotel input[type="date"] {
+.find-hotel input[type="text"] {
   width: 346px;
   height: inherit;
   padding-left: 12px;
   padding-right: 40px;
 
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.86;
+  text-align: left;
+  text-transform: uppercase;
+
+  color: #000000;
   background-color: #f2f2f2;
 }
 
-.find-hotel input[type="date"]:hover {
+.find-hotel input[type="text"]:hover {
   background-color: #ebebeb;
 }
 
-.find-hotel input[type="date"]:focus {
+.find-hotel input[type="text"]:focus {
   border: solid 2px #e5e5e5;
   background-color: white;
 }
-
 
 .form-calendar {
   position: absolute;
@@ -616,15 +623,7 @@ header img {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+    transform: translateY(-86px);
   }
 
   100% {
@@ -669,8 +668,10 @@ footer {
   justify-content: space-between;
 
   width: 150px;
-  padding: 0;
+  margin: 0;
   margin-right: 50px;
+  padding: 0;
+  list-style: none;
 }
 
 .social-btn {
@@ -755,11 +756,11 @@ footer {
 .hotel-types {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -ms-flexbox;      TWEENER - IE 10
   display: flex;
-  justify-content: space-between;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  justify-content: space-between;
 
   margin: 0 auto;
 
@@ -833,11 +834,11 @@ legend {
 }
 
 .check__input:disabled + .check__box {
-  background: #6a6a6a url(../img/checkbox-off-disabled.svg) no-repeat;
+  background: url(../img/checkbox-off-disabled.svg) no-repeat;
 }
 
 .check__input:checked:disabled + .check__box {
-  background: #6a6a6a url(../img/checkbox-on-disabled.svg) no-repeat;
+  background: url(../img/checkbox-on-disabled.svg) no-repeat;
 }
 
 /*--------------- form-hotel-right Start-------------- */
@@ -964,6 +965,7 @@ legend {
 .btn-transparent {
   display: block;
   margin: 0 auto;
+  margin-left: 82px;
   padding: 6px 35px;
 
   font-size: 14px;
@@ -997,7 +999,7 @@ legend {
 
   margin: 0 auto;
   min-height: 86px;
-  padding: 0 72px;
+  padding: 30px 72px;
 }
 
 .hotel-filter-find {
@@ -1082,6 +1084,12 @@ legend {
 
 /*-----------------hotel-list STARTS-----------------*/
 
+.hotel-list {
+  margin: 0;
+	padding: 0;
+  list-style: none;
+}
+
 
 .hotel-item {
 	display: flex;
@@ -1090,7 +1098,7 @@ legend {
   position: relative;
 
   margin: 0 auto;
-  padding: 27px 72px 30px 237px;
+  padding: 28px 72px 29px;
 
   text-align: left;
 
@@ -1101,32 +1109,6 @@ legend {
   border-bottom: 1px solid rgba(0, 1, 1, 0.2);
 }
 
-.hotel-item::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 72px;
-
-  width: 135px;
-  height: 90px;
-
-  background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
-.hotel-amara::before {
-  background-image: url("../img/hotel_amara.jpg");
-}
-
-.hotel-desert::before {
-  background-image: url("../img/hotel_desert.jpg");
-}
-
-.hotel-villas::before {
-  background-image: url("../img/hotel_villas.jpg");
-}
-
 .hotel-item h3 {
   margin: 0;
   padding: 0;
@@ -1134,6 +1116,10 @@ legend {
   font-size: 21px;
   line-height: 1.24;
   font-weight: bold;
+}
+
+.hotel-description {
+  margin-left: 30px;
 }
 
 .hotel-description h3:hover {
@@ -1208,6 +1194,7 @@ legend {
   justify-content: space-between;
 
   width: 110px;
+  margin-left: auto;
 
   font-size: 14px;
   line-height: 21px;
@@ -1232,7 +1219,7 @@ legend {
 }
 
 .stars-4  {
-  width: 85px;
+  width: 89px;
 }
 
 .stars-3 {
@@ -1240,7 +1227,7 @@ legend {
 }
 
 .stars-2 {
-  width: 45px;
+  width: 40px;
 }
 /*-----------------HOTELS ENDS-----------------*/
 
