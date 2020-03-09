@@ -17,7 +17,7 @@ body {
 	text-transform: uppercase;
 
 	color: #000000;
-	background-color: rgb(255, 255, 255);
+	background-color: #eeeeee;
 }
 
 
@@ -45,16 +45,16 @@ img {
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow:
-  -40px 0 0 #f2f2f2,
-   40px 0 0 #f2f2f2;;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.75);
 }
 
-header {
+.main-header {
 	position: relative;
   z-index: 200;
 
-	margin: 0 72px;
+  margin: 0 72px;
 }
 
 .main-nav {
@@ -83,7 +83,7 @@ header {
 	font-weight: bold;
 }
 
-header img {
+.main-header img {
 	position: absolute;
 
 	top: 0;
@@ -251,7 +251,6 @@ header img {
 
 /*-----------------Преимущества STARTS-----------------*/
 
-
 .features-1 {
   padding: 162px 0 86px;
 }
@@ -264,6 +263,7 @@ header img {
 .features__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   margin: 0 auto;
 	padding: 0;
@@ -329,6 +329,7 @@ header img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .features-2 p:last-child {
@@ -342,7 +343,7 @@ header img {
 .call {
 	position: relative;
 
-	padding: 43px 0 133px;
+  padding: 43px 0 133px;
 }
 
 .call-container {
@@ -421,7 +422,6 @@ header img {
 
   background-color: #ffffff;
 }
-
 
 .find-hotel .form-show {
   display: flex;
@@ -621,6 +621,8 @@ header img {
   background-color: #5496bd;
 }
 
+/*-----------------АНИМАЦИЯ START-----------------*/
+
 @keyframes bounce {
   0% {
     transform: translateY(-86px);
@@ -631,15 +633,44 @@ header img {
   }
 }
 
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+  }
+
+.form-error {
+animation-name: shake;
+animation-duration: 0.6s;
+}
+
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -86px, 0);
+  }
+}
+
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+  animation-duration: 0.6s;
+}
+/*-----------------АНИМАЦИЯ ENDS-----------------*/
+
 /*-----------------ФОРМА ENDS-----------------*/
 
 /*-----------------FOOTER START-----------------*/
 
-footer {
+.main-footer {
   padding: 32px 86px 40px 124px;
 
-	background-color: #f9fbf6;
-	opacity: 0.9;
+  opacity: 0.9;
+  background-color: #ffffff;
 }
 
 .footer-container {
@@ -756,7 +787,7 @@ footer {
 .hotel-types {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      TWEENER - IE 10
+  display: -ms-flexbox;      /*TWEENER - IE 10*/
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -780,13 +811,13 @@ footer {
   width: 393px;
 }
 
-fieldset {
+.form-hotel-left fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-legend {
+.form-hotel-left legend {
   margin-bottom: 27px;
 }
 
@@ -944,10 +975,16 @@ legend {
   -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
+
+  box-sizing: content-box;
 }
 
 .range-toggle:hover {
+  width: 5px;
+  height: 5px;
+
   background: #1c4f80;
+  box-sizing: content-box;
 }
 
 .range-toggle-min {
@@ -1018,7 +1055,7 @@ legend {
   font-weight: normal;
 }
 
-.sorting-by button {
+.sorting-by a {
   margin: 0;
   margin-right: 33px;
   padding: 0;
@@ -1037,16 +1074,16 @@ legend {
   cursor: pointer;
 }
 
-.sorting-by button:hover {
+.sorting-by a:hover {
   color: #81b3d2;
 }
 
-.sorting-by button:focus {
+.sorting-by a:focus {
   color: #000000;
   border: none;
 }
 
-.sorting-by button:active {
+.sorting-by a:active {
   color: #81b3d2;
   border: none;
 }
@@ -1055,28 +1092,28 @@ legend {
   margin-left: auto;
 }
 
-.filter-button svg {
+.filter-arrows {
   margin: 0;
   padding: 0;
 }
 
-.filter-button svg:first-child {
+.filter-arrows:first-child {
   margin-right: 8px;
 }
 
-.filter-button svg path {
+.filter-arrows path {
   fill: #cacaca;
 }
 
-.filter-button svg:hover path {
+.filter-arrows:hover path {
   fill: black;
 }
 
-.filter-button svg:focus path {
+.filter-arrows:focus path {
   fill: #81b3d2;
 }
 
-.filter-button svg:active path {
+.filter-arrows:active path {
   fill: #81b3d2;
 }
 

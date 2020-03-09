@@ -5,11 +5,11 @@
     <title>Hotels</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
 </head>
 <body>
   <div class="page-container">
-	<header>
+	<header class="main-header">
 			<nav>
 					<ul class="main-nav">
 							<li class="heading-info"><a href="#">Информация</a></li>
@@ -85,13 +85,13 @@
         <strong class="hotel-filter-find">Найдено: 3</strong>
         <span class="sorting">Сортировка:</span>
         <div class="sorting-by">
-          <button>По цене</button>
-          <button>По типу</button>
-          <button>По рейтингу</button>
+          <a href="#">По цене</a>
+          <a href="#">По типу</a>
+          <a href="#">По рейтингу</a>
         </div>
         <div class="filter-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+          <a href="#" aria-label="Сортировать по возрастанию"><svg class="filter-arrows" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg></a>
+          <a href="#" aria-label="Сортировать по убыванию"><svg class="filter-arrows" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg></a>
         </div>
       </div>
     </section>
@@ -142,7 +142,7 @@
 		</section>
 	</main>
 
-	<footer>
+	<footer class="main-footer">
 	  <div class="footer-container">
 			<div class="footer-contact">
 				<span>#VISITSEDONA</span>

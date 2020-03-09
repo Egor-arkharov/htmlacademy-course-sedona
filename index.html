@@ -5,11 +5,11 @@
     <title>Sedona</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-min.css">
 </head>
 <body>
   <div class="page-container">
-  <header>
+  <header class="main-header">
     <nav>
       <ul class="main-nav">
         <li class="heading-info"><a href="#">Информация</a></li>
@@ -114,14 +114,14 @@
         <div class="find-hotel__form">
           <div class="find-hotel__item">
             <label for="check-in">Дата заезда:</label>
-            <input type="text" name="date" id="check-in" placeholder="24 апреля 2017" required>
+            <input type="text" name="check-in" id="check-in" placeholder="24 апреля 2017">
             <svg class="form-calendar" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
               <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
               <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
           </svg>             </div>
           <div class="find-hotel__item">
             <label for="check-out">Дата выезда:</label>
-            <input type="text" name="date" id="check-out" placeholder="04 июля 2017" required>
+            <input type="text" name="check-out" id="check-out" placeholder="04 июля 2017">
             <svg class="form-calendar" xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
               <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
               <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
@@ -130,13 +130,13 @@
             <div class="find-hotel__item-half">
               <label for="adults">Взрослые:</label>
               <button class="minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
-              <input type="number" min="1" step="1" id="adults" value="2" required>
+              <input type="number" name="adults" min="1" step="1" id="adults" value="2">
               <button class="plus" type="button" onclick="this.previousElementSibling.stepUp()"></button>
             </div>
             <div class="find-hotel__item-half">
               <label for="children">Дети:</label>
               <button class="minus" type="button" onclick="this.nextElementSibling.stepDown()"></button>
-              <input type="number" min="0" step="1" id="children" value="0">
+              <input type="number" name="children" min="0" step="1" id="children" value="0">
               <button class="plus" type="button" onclick="this.previousElementSibling.stepUp()"></button>
             </div>
           </div>
@@ -146,7 +146,7 @@
     </section>
   </main>
 
-	<footer>
+	<footer class="main-footer">
 	  <div class="footer-container">
 			<div class="footer-contact">
         <span>#VISITSEDONA</span>
@@ -172,6 +172,6 @@
 		</div>
   </footer>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/script-min.js"></script>
 </body>
 </html>
