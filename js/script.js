@@ -17,11 +17,13 @@ try {
 }
 
 button.addEventListener("click", function (evt) {
-  if (popup.classList.contains("form-show")) {
-    popup.classList.toggle("bounceOutUp");
-  } else {
-    popup.classList.remove("bounceOutUp");
-    popup.classList.toggle("form-show");
+
+  if (popup.classList.contains("form-slide-down")) {
+    popup.classList.toggle("form-slide-up");
+  }
+
+  if (popup.classList.contains("form-slide-up")) {
+    popup.classList.toggle("form-slide-down");
   }
 
   if (storage) {
@@ -49,5 +51,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-

@@ -417,17 +417,56 @@ img {
 
 .find-hotel__form {
   padding: 55px;
-  display: none;
-  animation: bounce 0.9s;
 
   background-color: #ffffff;
 }
 
-.find-hotel .form-show {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
+/*-----------------АНИМАЦИЯ START-----------------*/
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-86px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
+
+.form-slide-down {
+  animation: slide-down 0.9s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+  20% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -86px, 0);
+  }
+}
+
+.form-slide-up {
+  -webkit-animation: slide-up;
+  animation: slide-up 0.9s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+  }
+
+.form-error {
+animation-name: shake;
+animation-duration: 0.6s;
+}
+
+/*-----------------АНИМАЦИЯ ENDS-----------------*/
 
 .find-hotel__item {
   display: flex;
@@ -620,47 +659,6 @@ img {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
-
-/*-----------------АНИМАЦИЯ START-----------------*/
-
-@keyframes bounce {
-  0% {
-    transform: translateY(-86px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-  20%, 40%, 60%, 80% { transform: translateX(10px); }
-  }
-
-.form-error {
-animation-name: shake;
-animation-duration: 0.6s;
-}
-
-@keyframes bounceOutUp {
-  20% {
-    transform: translate3d(0, -10px, 0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate3d(0, -86px, 0);
-  }
-}
-
-.bounceOutUp {
-  -webkit-animation-name: bounceOutUp;
-  animation-name: bounceOutUp;
-  animation-duration: 0.6s;
-}
-/*-----------------АНИМАЦИЯ ENDS-----------------*/
 
 /*-----------------ФОРМА ENDS-----------------*/
 
