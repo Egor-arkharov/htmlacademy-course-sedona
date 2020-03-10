@@ -419,6 +419,9 @@ img {
   padding: 55px;
 
   background-color: #ffffff;
+
+  animation: slide-down 0.9s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 /*-----------------АНИМАЦИЯ START-----------------*/
@@ -431,11 +434,6 @@ img {
   100% {
     transform: translateY(0);
   }
-}
-
-.form-slide-down {
-  animation: slide-down 0.9s ease-in-out;
-  animation-fill-mode: forwards;
 }
 
 @keyframes slide-up {

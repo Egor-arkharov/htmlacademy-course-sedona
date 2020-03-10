@@ -18,12 +18,12 @@ try {
 
 button.addEventListener("click", function (evt) {
 
-  if (popup.classList.contains("form-slide-down")) {
+  if (popup.classList.contains("find-hotel__form")) {
     popup.classList.toggle("form-slide-up");
   }
 
   if (popup.classList.contains("form-slide-up")) {
-    popup.classList.toggle("form-slide-down");
+    popup.classList.toggle("find-hotel__form");
   }
 
   if (storage) {
