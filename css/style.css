@@ -383,7 +383,7 @@ img {
 	top: -86px;
 	left: calc(50% - (568px / 2));
 
-  width: 568px;
+	width: 568px;
 
 	text-align: justify;
 }
@@ -424,6 +424,18 @@ img {
   animation-fill-mode: forwards;
 }
 
+.form-slide-up {
+  animation: slide-up 0.9s ease-in-out;
+  animation-fill-mode: forwards;
+  height: 0;
+}
+
+.form-error {
+animation-name: shake;
+animation-duration: 0.6s;
+}
+
+
 /*-----------------АНИМАЦИЯ START-----------------*/
 
 @keyframes slide-down {
@@ -437,31 +449,33 @@ img {
 }
 
 @keyframes slide-up {
-  20% {
+  10% {
     transform: translate3d(0, -10px, 0);
   }
 
-  100% {
-    opacity: 0;
+  70% {
     transform: translate3d(0, -86px, 0);
   }
-}
 
-.form-slide-up {
-  -webkit-animation: slide-up;
-  animation: slide-up 0.9s ease-in-out;
-  animation-fill-mode: forwards;
+  100% {
+	opacity: 0;
+	transform: translate3d(0, -1000px, 0);
+	padding: 0;
+  }
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-  20%, 40%, 60%, 80% { transform: translateX(10px); }
+  0%, 100% {
+    transform: translateX(0);
   }
 
-.form-error {
-animation-name: shake;
-animation-duration: 0.6s;
+  10%, 30%, 50%, 70%, 90% {
+     transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
 }
 
 /*-----------------АНИМАЦИЯ ENDS-----------------*/

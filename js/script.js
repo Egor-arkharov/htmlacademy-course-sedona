@@ -16,16 +16,14 @@ try {
   isStorageSupport = false;
 }
 
-button.addEventListener("click", function (evt) {
+if (popup) {
+	popup.classList.add("form-slide-up");
+}
 
-  if (popup.classList.contains("find-hotel__form")) {
+button.addEventListener("click", function () {
+	popup.classList.remove("form-error");
     popup.classList.toggle("form-slide-up");
-  }
-
-  if (popup.classList.contains("form-slide-up")) {
-    popup.classList.toggle("find-hotel__form");
-  }
-
+	
   if (storage) {
     adults.value = storage;
     children.value = storage;
