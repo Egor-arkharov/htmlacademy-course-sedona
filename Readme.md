@@ -1,4 +1,4 @@
-# Project for online cours «Sedona»
+# Project for online course «Sedona»
 
 * Course site: [htmlcss](https://htmlacademy.ru/intensive/htmlcss)
 * Certificate: [pdf](https://t.ly/ssfc)
